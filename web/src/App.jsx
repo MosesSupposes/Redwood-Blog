@@ -10,17 +10,18 @@ import Routes from 'src/Routes'
 import './scaffold.css'
 import './index.css'
 
-const extendedTheme = extendTheme(theme)
+/*
+    ? I included Chakra UI as a dependency, but seeing as it is not currently in use,
+    ? I decided to remove its context provider and other config from this file.
+*/
 
 const App = () => (
   <FatalErrorBoundary page={FatalErrorPage}>
     <RedwoodProvider titleTemplate="%PageTitle | %AppTitle">
       <ColorModeScript />
-      <ChakraProvider theme={extendedTheme}>
         <RedwoodApolloProvider>
           <Routes />
         </RedwoodApolloProvider>
-      </ChakraProvider>
     </RedwoodProvider>
   </FatalErrorBoundary>
 )
