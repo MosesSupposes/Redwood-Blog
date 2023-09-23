@@ -1,3 +1,7 @@
+/*
+  ? The definitions listed in the `type Query` section are expected to have
+  ? a service function with the same name (i.e. `posts -> posts()`)
+ */
 export const schema = gql`
   type Post {
     id: Int!
