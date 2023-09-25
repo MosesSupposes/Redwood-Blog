@@ -5,6 +5,7 @@ import {
   Label,
   TextField,
   Submit,
+  TextAreaField,
 } from '@redwoodjs/forms'
 
 const PostForm = (props) => {
@@ -48,12 +49,13 @@ const PostForm = (props) => {
           Body
         </Label>
 
-        <TextField
+        <TextAreaField
           name="body"
           defaultValue={props.post?.body}
           className="rw-input"
           errorClassName="rw-input rw-input-error"
           validation={{ required: true }}
+          style={{minHeight: '100px'}}
         />
 
         <FieldError name="body" className="rw-field-error" />
