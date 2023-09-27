@@ -18,3 +18,11 @@ model Post {
   // TODO: Add a field for references/backlinks
 }
 
+model Contact {
+  id        Int       @id @default(autoincrement())
+  name      String
+  email     String
+  message   String
+  createdAt DateTime  @default(now())
+}
+
